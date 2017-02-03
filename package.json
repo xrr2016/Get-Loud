@@ -12,7 +12,9 @@
   ],
   "author": "xrr2016",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "fabric": "1.7.3"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.7"
   }
