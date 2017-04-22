@@ -1,1 +1,6 @@
-## Every Thing Was Gone
+## 数独游戏
+
+
+运行
+
+> node
