@@ -3,4 +3,4 @@
 
 运行
 
-> node
+> node index.js
