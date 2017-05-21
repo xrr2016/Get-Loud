@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-better-body": "^3.0.2",
+    "koa-router": "^7.1.1",
+    "mysql2": "^1.2.0",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.11.0"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- ./index.js"
+  },
+  "author": "xrr2016",
+  "license": "ISC",
+  "description": ""
+}
