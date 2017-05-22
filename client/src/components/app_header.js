@@ -1,18 +1,21 @@
 import React from 'react'
+import logo from '../assets/logo.png'
 
 const style = {
   position: "fixed",
   top: 0,
   left: 0,
-  width: "100%",
   height: 60,
-  backgroundColor: "#fff",
+  width: "100%",
+  paddingLeft: 32,
+  color: "#fff",
+  backgroundColor: "#22C7A9",
   boxShadow: "0px 0px 4px rgba(0, 0, 0, .4)"
 }
 
 const AppHeader = () => (
   <header style={style}>
-    Make Some Voices!
+    <img src={logo} alt="make some voices" />
   </header>
 )
 

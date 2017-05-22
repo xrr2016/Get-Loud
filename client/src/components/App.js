@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import AppHeader from '../components/app_header'
+import AppHeader from './app_header'
+import AppFooter from './app_footer'
+import AppContent from './app_content'
 
 class App extends Component {
   render() {
     return (
       <div>
         <AppHeader />
-        hello 
+        <AppContent />
+        <AppFooter />
       </div>
     );
   }
