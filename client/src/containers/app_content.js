@@ -1,18 +1,21 @@
 import React from 'react'
-import NewVoiceBtn from '../components/new_voice_btn'
+import AppRight from '../components/app_right'
+import VoiceList from '../containers/voice_list'
 
 const style = {
-  margin: '24px auto',
-  width: 1024,
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
   minHeight: 524,
-  backgroundColor: "#fff",
   padding: "12px 24px",
+  margin: '24 auto',
   boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
 }
 
 const AppContent = () => (
   <main style={style}>
-    content
+    <VoiceList />
+    <AppRight />
   </main>
 )
 
