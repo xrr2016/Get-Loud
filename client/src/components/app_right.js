@@ -1,5 +1,6 @@
 import React from 'react'
 import NewVoiceBtn from './new_voice_btn'
+import AppTags from '../containers/app_tags'
 
 const style = {
   // backgroundColor: "#fff",
@@ -9,6 +10,7 @@ const style = {
 const AppRight = () => (
   <div style={style}>
     <NewVoiceBtn />
+    <AppTags />
   </div>
 )
 

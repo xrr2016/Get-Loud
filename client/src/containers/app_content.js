@@ -9,7 +9,6 @@ const style = {
   minHeight: 524,
   padding: "12px 24px",
   margin: '24 auto',
-  boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
 }
 
 const AppContent = () => (
