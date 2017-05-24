@@ -2,9 +2,9 @@ import React from 'react'
 import logo from '../assets/logo.png'
 
 const style = {
-  position: "fixed",
-  top: 0,
-  left: 0,
+  // position: "fixed",
+  // top: 0,
+  // left: 0,
   height: 60,
   width: "100%",
   paddingLeft: 32,
