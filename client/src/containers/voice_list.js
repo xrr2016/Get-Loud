@@ -5,7 +5,7 @@ import data from '../data'
 const style = {
   width: 1024,
   minHeight: 524,
-  backgroundColor: "#fff",
+  backgroundColor: "#f1f1f1",
   padding: "12px 24px",
   marginRight: 32,
   listStyle: 'none',

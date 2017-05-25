@@ -1,7 +1,7 @@
 import React from 'react'
 
 const style = {
-  width: 180,
+  width: 200,
   height: 48,
   color: '#fff',
   fontSize: 18,
@@ -12,6 +12,7 @@ const style = {
   transtionsion: 'all .1s ease 0s',
   outline: 'none',
   border: 'none',
+  cursor: 'pointer',
   appearance: 'none'
 }
 

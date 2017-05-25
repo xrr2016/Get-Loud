@@ -6,17 +6,18 @@ const style = {
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'center',
-  height: 60,
+  padding: '14px',
   margin: '12px 0px',
   backgroundColor: '#fff',
   borderBottom: '1px solid #ebebeb'
 }
 
 const itemMid = {
-  flex: 9
+  flex: 5
 }
 const itemRight = {
   flex: 1,
+  textAlign: 'center',
 }
 const contentStyle = {
   margin: 0,
@@ -42,7 +43,10 @@ const VoiceItem = ({ voice }) => (
       <span>{voice.data}by{voice.author}</span>
     </div>
     <div style={itemRight}>
-      {voice.like}
+      <span>
+        {voice.like}
+      </span>
+      <span>&gt;</span>
     </div>
   </li>
 )

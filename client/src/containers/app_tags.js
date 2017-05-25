@@ -1,30 +1,27 @@
 import React, { Component } from 'react'
+import AppTag from '../components/app_tag'
 
 const tags = ['hello', 'world', 'java', 'react', 'vue', 'node.js', 'angular']
 
 const style = {
-  maxWidth: 180,
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'space-around',
+  flexWrap: 'wrap',
+  alignContens: 'center',
+  maxWidth: 200,
   height: 'auto',
   listStyle: 'none',
-  padding: '12px 0px',
-  backgroundColor: '#fff'
-}
-const tagStyle = {
-  float: 'left',
-  marginRight: 12,
-  marginBottom: 12,
-  border: '1px solid #ddd',
-  padding: '4px 6px',
-  color: '#333',
-  fontSize: 14,
-  cursor: 'pointer'
+  padding: '12px',
+  backgroundColor: '#fff',
+  boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
 }
 
 class AppTags extends Component {
   render() {
     return (
       <ul style={style}>
-        {tags.map((tag, index) => <li key={index} style={tagStyle}>{tag}</li>)}
+        {tags.map((tag, index) => <AppTag key={index} tag={tag} />)}
       </ul>
     )
   }
