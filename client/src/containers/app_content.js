@@ -7,7 +7,7 @@ const style = {
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
   minHeight: 524,
-  padding: "12px 24px",
+  padding: "12px 32px",
   margin: '24 auto',
 }
 
