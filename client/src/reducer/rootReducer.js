@@ -1,8 +1,10 @@
-import { combineRedecers } from 'redux'
+import { combineReducers } from 'redux'
 import voiceReducer from './voice_reducer'
 
-export default function () {
-  return combineRedecers({
+const rootReducer = () => {
+  return combineReducers({
     voices: voiceReducer
   })
 }
+
+export default rootReducer

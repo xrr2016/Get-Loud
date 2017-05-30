@@ -1,5 +1,5 @@
 import React from 'react'
-import AppRight from '../components/app_right'
+import AppRight from './app_right'
 import VoiceList from '../containers/voice_list'
 
 const style = {

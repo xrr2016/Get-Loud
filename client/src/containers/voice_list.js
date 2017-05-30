@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect,  } from 'react-redux'
+import { fetchVoices, fetchVoicesFailure, fetchVoicesSuccess } from '../action/voice'
 import VoiceItem from '../components/voice_item'
 import data from '../data'
 
@@ -22,4 +25,12 @@ class VoiceList extends Component {
   }
 }
 
-export default VoiceList
+const mapDispatchToProps = (dispatch) => ({
+  ...bindActionCreators({
+    fetchVoices,
+    fetchVoicesFailure,
+    fetchVoicesSuccess
+  }, dispatch),
+})
+
+export default connect(null, mapDispatchToProps)(VoiceList)
