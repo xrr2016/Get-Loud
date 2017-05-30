@@ -1,5 +1,6 @@
 import Router from 'koa-router'
 import body from 'koa-better-body'
+import { getAllVoices } from '../controllers/voice_controler'
 
 const voiceRouter = new Router()
 

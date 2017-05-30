@@ -8,19 +8,22 @@ import data from '../data'
 const style = {
   width: 1024,
   minHeight: 524,
-  backgroundColor: "#f1f1f1",
+  margin: '0px auto',
+  marginTop: '32px',
   padding: "12px 24px",
-  marginRight: 32,
   listStyle: 'none',
+  backgroundColor: "#fff",
+  overflowX: 'hidden',
+  overflowY: 'auto',
   boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
 }
 
 class VoiceList extends Component {
   render() {
     return (
-      <section style={style}>
+      <ul style={style}>
         {data.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
-      </section>
+      </ul>
     )
   }
 }

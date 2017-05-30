@@ -3,19 +3,20 @@
     "koa": "^2.2.0",
     "koa-better-body": "^3.0.2",
     "koa-router": "^7.1.1",
+    "mysql": "^2.13.0",
     "mysql2": "^1.2.0",
+    "nodemon": "^1.11.0",
     "sequelize": "^3.30.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-latest": "^6.24.1",
-    "nodemon": "^1.11.0"
+    "babel-preset-latest": "^6.24.1"
   },
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node -- ./index.js"
+    "start": "node ./index.js"
   },
   "author": "xrr2016",
   "license": "ISC",

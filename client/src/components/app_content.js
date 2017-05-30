@@ -1,6 +1,7 @@
 import React from 'react'
-import AppRight from './app_right'
+// import AppRight from './app_right'
 import VoiceList from '../containers/voice_list'
+import NewVoiceBtn from './new_voice_btn'
 
 const style = {
   display: 'flex',
@@ -13,8 +14,8 @@ const style = {
 
 const AppContent = () => (
   <main style={style}>
+    <NewVoiceBtn />
     <VoiceList />
-    <AppRight />
   </main>
 )
 

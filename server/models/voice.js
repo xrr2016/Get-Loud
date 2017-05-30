@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
-import { dbname, dbuser, dbpwd } from '../config'
+import config from '../config'
 
-const db = new Sequelize(dbname, dbuser, dbpwd, {
+const db = new Sequelize(config.dbname, config.dbuser, config.dbpwd, {
   host: 'localhost',
   dialect: 'mysql',
   pool: {
