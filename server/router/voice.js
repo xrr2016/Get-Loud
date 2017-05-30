@@ -1,12 +1,11 @@
 import Router from 'koa-router'
-import body from 'koa-better-body'
 import { getAllVoices } from '../controllers/voice_controler'
 
 const voiceRouter = new Router()
 
-voiceRouter.get('/api/voices', body(), async ctx => {
-  const voices = await getAllVoices()
-  ctx.body = voices
+voiceRouter.get('/voices', async ctx => {
+  // const voices = await getAllVoices()
+  ctx.body = 'voices router'
 })
 
 export default voiceRouter

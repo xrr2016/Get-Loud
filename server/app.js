@@ -1,15 +1,13 @@
 import Koa from 'koa'
-import voiceRouter from './router/voice'
+import bodyParser from 'koa-bodyparser'
 import config from './config'
+import router from './router'
 
-export const app = new Koa()
+const app = new Koa()
 
-app.use(async (ctx, next) => {
-  ctx.body = 'hello world'
-  await next()
-})
+app.use(bodyParser())
 
-app.use(voiceRouter.routes()).use(voiceRouter.allowedMethods())
+app.use(router.routes()).use(router.allowedMethods())
 
 app.listen(config.port)
 
