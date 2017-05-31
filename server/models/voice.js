@@ -20,6 +20,11 @@ db.authenticate()
   })
 
 const Voice = db.define('voice', {
+  id: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    primaryKey: true
+  },
   content: {
     type: Sequelize.STRING,
     allowNull: false
@@ -35,10 +40,19 @@ const Voice = db.define('voice', {
   tags: {
     type: Sequelize.STRING,
     defaultValue: ''
+  },
+  create_at: {
+    type: Sequelize.DATE(),
+    defaultValue: Date.now
+  },
+  update_at: {
+    type: Sequelize.DATE(),
+    defaultValue: Date.now
   }
 }, {
-    timestamps: true
-})
+    timestamps: false
+  })
 
+Voice.sync()
 
 export default Voice 

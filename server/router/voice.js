@@ -1,11 +1,18 @@
 import Router from 'koa-router'
-import { getAllVoices } from '../controllers/voice_controler'
+import {
+  getAllVoices,
+  getOneVoice,
+  createVoice,
+  updateVoice,
+  deleteVoice
+} from '../controllers/voice_controler'
 
 const voiceRouter = new Router()
 
-voiceRouter.get('/voices', async ctx => {
-  // const voices = await getAllVoices()
-  ctx.body = 'voices router'
-})
+voiceRouter.get('/voices', getAllVoices)
+  .get('/voices/:id', getOneVoice)
+  .post('/voices', createVoice)
+  .put('/voices', updateVoice)
+  .delete('/voices/:id', deleteVoice)
 
 export default voiceRouter
