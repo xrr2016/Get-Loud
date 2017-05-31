@@ -6,12 +6,12 @@
     "koa-router": "^7.1.1",
     "mysql": "^2.13.0",
     "mysql2": "^1.2.0",
-    "nodemon": "^1.11.0",
     "sequelize": "^3.30.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-latest": "^6.24.1"
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.11.0"
   },
   "name": "server",
   "version": "1.0.0",
