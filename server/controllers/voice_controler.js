@@ -20,12 +20,12 @@ export const createVoice = async (ctx) => {
 }
 // 更新一个 voice
 export const updateVoice = async (ctx) => {
-  const id = ctx.request.body.id
-  const updateVoice = await Voice.findOne({ where: { id: id } })
+  const updateVoice = await Voice.findOne({ where: { id: ctx.params.id } })
+  const { content, likes, tags } = ctx.request.body
   ctx.body = await updateVoice.update({
-    content: ctx.requset.body.content,
-    likes: ctx.requset.body.likes,
-    tags: ctx.requset.body.tags
+    content,
+    likes,
+    tags
   })
 }
 // 删除一个 voice
