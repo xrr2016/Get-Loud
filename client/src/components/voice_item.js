@@ -1,6 +1,5 @@
 import React from 'react'
 import { randomColor } from '../utils'
-console.log(randomColor())
 
 const style = {
   display: 'flex',

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect, } from 'react-redux'
 import { fetchVoices } from '../action/voice'
-import VoiceItem from '../components/voice_item'
+// import VoiceItem from '../components/voice_item'
 
 const style = {
   width: 1024,
@@ -11,7 +11,6 @@ const style = {
   marginTop: '32px',
   padding: "12px 24px",
   listStyle: 'none',
-  backgroundColor: "#fff",
   overflowX: 'hidden',
   overflowY: 'auto',
   boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
@@ -19,25 +18,27 @@ const style = {
 
 class VoiceList extends Component {
 
-  state = {
-    voices: []
-  }
-
   componentDidMount() {
-    console.log(this.props)
+    this.props.fetchVoices()
   }
 
   render() {
     return (
       <ul style={style}>
-        {voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
       </ul>
     )
   }
 }
+        // {voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
 
 const mapDispatchToProps = (dispatch) => ({
   ...bindActionCreators({ fetchVoices }, dispatch),
 })
 
-export default connect(null, mapDispatchToProps)(VoiceList)
+const mapStateToProps = (state) => {
+  return {
+    voices: state.voices
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VoiceList)

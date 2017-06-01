@@ -1,10 +1,10 @@
 import { FETCH_VOICES, LIKE_VOICE, DISLIKE_VOICE, ADD_COMMENT, SELECT_TAG } from './types'
-import { loadloadAllVoices } from './api'
+import { loadAllVoices } from './api'
 
 export function fetchVoices() {
   return {
     type: FETCH_VOICES,
-    payload: loadloadAllVoices()
+    payload: loadAllVoices()
   }
 }
 export function likeVoice(id) {
