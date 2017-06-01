@@ -1,28 +1,10 @@
-import {
-  FETCH_VOICES,
-  FETCH_VOICES_FAILURE,
-  FETCH_VOICES_SUCCESS,
-  LIKE_VOICE,
-  DISLIKE_VOICE,
-  ADD_COMMENT,
-  SELECT_TAG
-} from './types'
+import { FETCH_VOICES, LIKE_VOICE, DISLIKE_VOICE, ADD_COMMENT, SELECT_TAG } from './types'
+import { loadloadAllVoices } from './api'
 
 export function fetchVoices() {
   return {
-    type: FETCH_VOICES
-  }
-}
-export function fetchVoicesFailure() {
-  return {
-      type: FETCH_VOICES_FAILURE,
-      msg: 'Some thing going wrong!'
-  }
-}
-export function fetchVoicesSuccess(response) {
-  return {
-    type: FETCH_VOICES_SUCCESS,
-    response
+    type: FETCH_VOICES,
+    payload: loadloadAllVoices()
   }
 }
 export function likeVoice(id) {

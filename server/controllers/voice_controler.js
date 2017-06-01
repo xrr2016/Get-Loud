@@ -4,12 +4,14 @@ import Voice from '../models/voice'
 export const getAllVoices = async (ctx) => {
   ctx.body = await Voice.all()
 }
+
 // 获取单个 voice
 export const getOneVoice = async (ctx) => {
   ctx.body = await Voice.findOne({
     where: { id: ctx.params.id }
   })
 }
+
 // 新增一个 voice
 export const createVoice = async (ctx) => {
   const { content, author, tags, likes } = ctx.request.body
@@ -18,6 +20,7 @@ export const createVoice = async (ctx) => {
   })
   ctx.body = await newVoice.save()
 }
+
 // 更新一个 voice
 export const updateVoice = async (ctx) => {
   const updateVoice = await Voice.findOne({ where: { id: ctx.params.id } })
@@ -28,6 +31,7 @@ export const updateVoice = async (ctx) => {
     tags
   })
 }
+
 // 删除一个 voice
 export const deleteVoice = async (ctx) => {
   const voice = await Voice.findOne({ where: { id: ctx.params.id } })

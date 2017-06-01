@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { connect,  } from 'react-redux'
-import { fetchVoices, fetchVoicesFailure, fetchVoicesSuccess } from '../action/voice'
+import { connect, } from 'react-redux'
+import { fetchVoices } from '../action/voice'
 import VoiceItem from '../components/voice_item'
-import data from '../data'
 
 const style = {
   width: 1024,
@@ -19,21 +18,26 @@ const style = {
 }
 
 class VoiceList extends Component {
+
+  state = {
+    voices: []
+  }
+
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <ul style={style}>
-        {data.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
+        {voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
       </ul>
     )
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  ...bindActionCreators({
-    fetchVoices,
-    fetchVoicesFailure,
-    fetchVoicesSuccess
-  }, dispatch),
+  ...bindActionCreators({ fetchVoices }, dispatch),
 })
 
 export default connect(null, mapDispatchToProps)(VoiceList)

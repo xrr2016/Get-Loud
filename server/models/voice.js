@@ -1,6 +1,7 @@
 import Sequelize from 'sequelize'
 import config from '../config'
 
+//链接数据库
 const db = new Sequelize(config.dbname, config.dbuser, config.dbpwd, {
   host: 'localhost',
   dialect: 'mysql',
@@ -19,6 +20,7 @@ db.authenticate()
     console.error('Unable to connect to the database:', err)
   })
 
+// 定义数据结构
 const Voice = db.define('voice', {
   id: {
     type: Sequelize.UUID,
@@ -52,7 +54,8 @@ const Voice = db.define('voice', {
 }, {
     timestamps: false
   })
-
+  
+// 创建表结构
 Voice.sync()
 
 export default Voice 

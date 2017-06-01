@@ -1,18 +1,17 @@
+import { handle } from 'redux-pack'
 import {
-  FETCH_VOICES,
-  FETCH_VOICES_FAILURE,
-  FETCH_VOICES_SUCCESS,
-  LIKE_VOICE,
-  DISLIKE_VOICE,
-  ADD_COMMENT,
-  SELECT_TAG
+  FETCH_VOICES, LIKE_VOICE, DISLIKE_VOICE, ADD_COMMENT, SELECT_TAG
 } from '../action/types'
 
 export default function voiceReducer(state = [], action) {
   switch (action.type) {
     case FETCH_VOICES:
-    case FETCH_VOICES_FAILURE:
-    case FETCH_VOICES_SUCCESS:
+      return handle(state, action, {
+        start: prevState => ({ ...prevState, isLoading: true, error: false }),
+        finish: prevState => ({ ...prevState, isLoading: false }),
+        failure: prevState => ({ ...prevState, error: action.payload }),
+        success: prevState => ({ ...prevState, voices: action.payload })
+      })
     case LIKE_VOICE:
     case DISLIKE_VOICE:
     case ADD_COMMENT:
