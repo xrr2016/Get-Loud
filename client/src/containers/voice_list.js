@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect, } from 'react-redux'
 import { fetchVoices } from '../action/voice'
-// import VoiceItem from '../components/voice_item'
+import VoiceItem from '../components/voice_item'
 
 const style = {
   width: 1024,
@@ -13,7 +13,7 @@ const style = {
   listStyle: 'none',
   overflowX: 'hidden',
   overflowY: 'auto',
-  boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
+  // boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
 }
 
 class VoiceList extends Component {
@@ -22,14 +22,20 @@ class VoiceList extends Component {
     this.props.fetchVoices()
   }
 
+  // voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)
+
   render() {
+    const { loading, error, voices } = this.props
     return (
       <ul style={style}>
+        {error ? 'Working on it.' : null}
+        {loading ? 'Loading...' : null}
+        {voices && voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
       </ul>
     )
   }
 }
-        // {voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
+// {this.props.voices.map((voice, index) => <VoiceItem key={index} voice={voice} />)}
 
 const mapDispatchToProps = (dispatch) => ({
   ...bindActionCreators({ fetchVoices }, dispatch),
@@ -37,7 +43,9 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => {
   return {
-    voices: state.voices
+    loading: state.loading,
+    error: state.error,
+    voices: state.voices.voices
   }
 }
 

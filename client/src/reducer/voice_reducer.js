@@ -1,5 +1,11 @@
 import {
-  FETCH_VOICES, LIKE_VOICE, DISLIKE_VOICE, ADD_COMMENT, SELECT_TAG
+  FETCH_VOICES_PENDING,
+  FETCH_VOICES_REJECTED,
+  FETCH_VOICES_FULFILLED,
+  LIKE_VOICE,
+  DISLIKE_VOICE,
+  ADD_COMMENT,
+  SELECT_TAG
 } from '../action/types'
 
 const initialState = {
@@ -11,8 +17,12 @@ const initialState = {
 export default function voiceReducer(state = initialState, action) {
   const { type, payload } = action
   switch (type) {
-    case FETCH_VOICES:
-      return {...state, payload}
+    case FETCH_VOICES_PENDING:
+      return { ...state, loading: true }
+    case FETCH_VOICES_REJECTED:
+      return { ...state, loading: false, error: payload }
+    case FETCH_VOICES_FULFILLED:
+      return { ...state, loading: false, voices: payload }
     case LIKE_VOICE:
     case DISLIKE_VOICE:
     case ADD_COMMENT:
