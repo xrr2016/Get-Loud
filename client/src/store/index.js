@@ -1,15 +1,15 @@
-import thunk from 'redux-thunk'
-// import createLogger from 'redux-logger'
-import {middleware as pack } from 'redux-pack'
+// import thunk from 'redux-thunk'
+import logger from 'redux-logger'
+// import {middleware as pack } from 'redux-pack'
+import promise from 'redux-promise-middleware'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from '../reducer/rootReducer'
 
-// const logger = createLogger()
 const store = createStore(
   rootReducer,
   composeWithDevTools(
-    applyMiddleware(thunk, pack)
+    applyMiddleware(promise(), logger)
   )
 )
 
