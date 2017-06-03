@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
 const tagStyle = {
-  padding: '12px 14px 4px 14px',
+  paddingBottom: 4,
+  marginRight: 14,
   color: '#333',
   fontWeight: 600,
   fontSize: 16,
@@ -21,6 +22,8 @@ class Tag extends Component {
     })
   }
 
+  handleClick = () => { }
+
   render() {
     let style
     if (this.state.hover) {
@@ -29,7 +32,9 @@ class Tag extends Component {
     return (
       <li style={style ? style : tagStyle}
         onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}>
+        onMouseLeave={this.toggleHover}
+        onClick={this.handleClick}
+      >
         {this.props.category}
       </li>
     )
