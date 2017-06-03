@@ -5,11 +5,11 @@ import { fetchVoices } from '../action/voice'
 import VoiceItem from '../components/voice_item'
 
 const style = {
-  width: 1024,
+  width: '100%',
   minHeight: 524,
   margin: '0px auto',
-  marginTop: '32px',
-  padding: "12px 24px",
+  marginTop: 6,
+  padding: 0,
   listStyle: 'none',
   overflowX: 'hidden',
   overflowY: 'auto',

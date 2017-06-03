@@ -5,20 +5,24 @@ const style = {
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'center',
-  padding: '14px',
+  padding: '18px 14px',
   margin: '12px 0px',
   backgroundColor: '#fff',
-  borderBottom: '1px solid #ebebeb'
+  // borderBottom: '1px solid #ebebeb'
+  boxRadius: 4
 }
 
 const itemMid = {
-  flex: 5
+  flex: 5,
+  paddingLeft: 12,
 }
 const itemRight = {
   flex: 1,
   textAlign: 'center',
 }
 const contentStyle = {
+  fontSize: 18,
+  color: '#c89b01',
   margin: 0,
   fontWeight: 'normal'
 }
