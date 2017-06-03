@@ -10,7 +10,7 @@ const style = {
   alignItems: 'center',
   flexDirection: 'column',
   width: '80%',
-  paddingTop: 30
+  paddingTop: 20
 }
 
 const headerStyle = {
