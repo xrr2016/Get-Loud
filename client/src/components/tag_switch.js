@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import Tag from './tag'
+import { NavLink } from 'react-router-dom'
+// import Tag from './tag'
 
 
 class TagSwitch extends Component {
-  state = {
-    category: ['全部', '热议', '最新']
-  }
-
 
   render() {
     return (
       <ul className="app-tag-switch">
-        {this.state.category.map(category => <Tag key={category} category={category} />)}
+        <NavLink exact activeClassName="active" className="app-tag" to='/'>全部</NavLink>
+        <NavLink activeClassName="active" className="app-tag" to='/new'>最新</NavLink>
+        <NavLink activeClassName="active" className="app-tag" to='/hot'>热议</NavLink>
       </ul>
     )
   }

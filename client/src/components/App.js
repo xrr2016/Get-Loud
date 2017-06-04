@@ -10,16 +10,16 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1 className="app-title">Make some voices!</h1>
-        <div className="app-header">
-            <NewVoiceBtn />
-            <TagSwitch />
-          <Router>
+        <Router>
+          <div>
+            <h1 className="app-title">Make some voices!</h1>
+            <div className="app-header">
+              <TagSwitch />
+              <NewVoiceBtn />
+            </div>
             <Route path="/" component={VoiceList} />
-            <Route path="/hot" component={VoiceList} />
-            <Route path="/new" component={VoiceList} />
-          </Router>
-        </div>
+          </div>
+        </Router>
       </div>
     )
   }

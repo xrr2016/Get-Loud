@@ -16,7 +16,7 @@ html, body {
   justify-content: flex-start;
   width: 80%;
   margin: 0px auto;
-  align-items: center;
+  /*align-items: center;*/
   flex-direction: column;
   padding-top: 20px;
 }
@@ -68,13 +68,19 @@ html, body {
 }
 
 .app-tag {
+  display: block;
   margin-right: 14px;
   padding-bottom: 4px;
   color: #333;
   font-weight: 600;
   font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+}
+
+.app-tag.active {
+  border-bottom-color: #bc3b28;
 }
 
 .app-tag:hover {
