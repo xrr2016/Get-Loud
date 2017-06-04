@@ -1,16 +1,6 @@
 import React, { Component } from 'react'
 import Tag from './tag'
 
-const style = {
-  listStyle: 'none',
-  display: 'flex',
-  alignSelf: 'flex-end',
-  justifyContent: 'flex-start',
-  flex: 1,
-  padding: 0,
-  margin: 0,
-}
-
 
 class TagSwitch extends Component {
   state = {
@@ -20,7 +10,7 @@ class TagSwitch extends Component {
 
   render() {
     return (
-      <ul style={style}>
+      <ul className="app-tag-switch">
         {this.state.category.map(category => <Tag key={category} category={category} />)}
       </ul>
     )
