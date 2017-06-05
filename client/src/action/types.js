@@ -7,3 +7,5 @@ export const LIKE_VOICE = 'LIKE_VOICE'
 export const DISLIKE_VOICE = 'DISLIKE_VOICE'
 export const ADD_COMMENT = 'ADD_COMMENT'
 export const SELECT_TAG = 'SELECT_TAG'
+
+export const CREATE_NEW_VOICE = 'CREATE_NEW_VOICE'

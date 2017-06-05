@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import NewVoiceBtn from './new_voice_btn'
 import TagSwitch from './tag_switch'
 import VoiceList from '../containers/voice_list'
-
-
+import CreateVoiceModal from '../containers/create_voice_modal'
 
 class App extends Component {
   render() {
@@ -20,6 +19,7 @@ class App extends Component {
             <Route path="/" component={VoiceList} />
           </div>
         </Router>
+        <CreateVoiceModal />
       </div>
     )
   }

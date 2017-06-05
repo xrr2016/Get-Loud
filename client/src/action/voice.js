@@ -3,9 +3,10 @@ import {
   LIKE_VOICE,
   DISLIKE_VOICE,
   ADD_COMMENT,
-  SELECT_TAG
+  SELECT_TAG,
+  CREATE_NEW_VOICE
 } from './types'
-import { loadAllVoices } from './api'
+import { loadAllVoices, createNewVoice } from './api'
 
 export function fetchVoices() {
   return {
@@ -13,18 +14,21 @@ export function fetchVoices() {
     payload: loadAllVoices()
   }
 }
+
 export function likeVoice(id) {
   return {
     type: LIKE_VOICE,
     id
   }
 }
+
 export function dislikeVoice(id) {
   return {
     type: DISLIKE_VOICE,
     id
   }
 }
+
 export function addComment(id, comment) {
   return {
     type: ADD_COMMENT,
@@ -32,6 +36,7 @@ export function addComment(id, comment) {
     comment
   }
 }
+
 export function selectTag(tag) {
   return {
     type: SELECT_TAG,
@@ -39,6 +44,12 @@ export function selectTag(tag) {
   }
 }
 
+export function createNreVoice(voice) {
+  return {
+    type: CREATE_NEW_VOICE,
+    payload: createNewVoice()
+  }
+}
 
 
 
