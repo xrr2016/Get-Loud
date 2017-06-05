@@ -1,24 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import '../styles/new_voice_btn.css'
 
-class NewVoiceBtn extends Component {
-
-  state = {
-    showModal: false
-  }
-
-  handleClick = () => {
-    this.setState({
-      showModal: true
-    })
-  }
-
-  render() {
-    return (
-      <button className="app-new-voice-btn" 
-        onClick={this.handleClick}>New Voice</button>
-    )
-  }
-}
-
+const NewVoiceBtn = () =>
+  <NavLink to="/create_voice" className="app-new-voice-btn" >New Voice</NavLink>
 
 export default NewVoiceBtn

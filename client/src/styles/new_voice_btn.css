@@ -1,0 +1,18 @@
+.app-new-voice-btn {
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #c89b01;
+  transition: all .1s ease 0s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
