@@ -6,7 +6,7 @@ import {
   SELECT_TAG,
   CREATE_NEW_VOICE
 } from './types'
-import { loadAllVoices, addNewVoice } from './api'
+import { loadAllVoices } from './api'
 
 export function fetchVoices() {
   return {
@@ -47,7 +47,8 @@ export function selectTag(tag) {
 export function createNewVoice(voice) {
   return {
     type: CREATE_NEW_VOICE,
-    payload: addNewVoice(voice)
+    voice,
+    // payload: addNewVoice(voice)
   }
 }
 

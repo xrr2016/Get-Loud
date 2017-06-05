@@ -2,14 +2,14 @@ import {
   FETCH_VOICES_PENDING,
   FETCH_VOICES_REJECTED,
   FETCH_VOICES_FULFILLED,
-  LIKE_VOICE,
-  DISLIKE_VOICE,
-  ADD_COMMENT,
-  SELECT_TAG
+  // CREATE_NEW_VOICE_PENDING,
+  // CREATE_NEW_VOICE_REJECTED,
+  // CREATE_NEW_VOICE_FULFILLED
+  CREATE_NEW_VOICE
 } from '../action/types'
 
 const initialState = {
-  voices: null,
+  voices: [],
   error: null,
   loading: false,
 }
@@ -23,10 +23,9 @@ export default function voiceReducer(state = initialState, action) {
       return { ...state, loading: false, error: payload }
     case FETCH_VOICES_FULFILLED:
       return { ...state, loading: false, voices: payload }
-    case LIKE_VOICE:
-    case DISLIKE_VOICE:
-    case ADD_COMMENT:
-    case SELECT_TAG:
+    case CREATE_NEW_VOICE:
+      const voices = state.voices.concat(action.voice)
+      return Object.assign(state, voices)
     default:
       return state
   }
