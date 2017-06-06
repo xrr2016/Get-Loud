@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createNewVoice } from '../action/voice'
-import '../styles/create_voice_form.css'
+// import '../styles/create_voice_form.css'
 
 class CreateVoiceForm extends Component {
 
@@ -27,7 +27,7 @@ class CreateVoiceForm extends Component {
     const { content, author } = this.state
     return (
       <form className="app-form" onSubmit={this.handleSubmit}>
-        <div className="form-group">
+        <div className="mdc-form-field">
           <input type="text"
             className="form-input"
             value={content}
@@ -35,7 +35,8 @@ class CreateVoiceForm extends Component {
             name="content"
             onChange={this.handleChange}
             placeholder="说点什么" />
-
+        </div>
+        <div className="mdc-form-field">
           <input type="text"
             className="form-input"
             value={author}
@@ -43,7 +44,6 @@ class CreateVoiceForm extends Component {
             name="author"
             onChange={this.handleChange}
             placeholder="您的昵称" />
-
         </div>
         <div className="form-actions">
           <button className="form-action" type="submit">确定</button>

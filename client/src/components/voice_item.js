@@ -1,57 +1,26 @@
 import React from 'react'
 import { randomColor } from '../utils'
 
-const style = {
-  display: 'flex',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-  padding: '18px 14px',
-  margin: '12px 0px',
-  backgroundColor: '#fff',
-  // borderBottom: '1px solid #ebebeb'
-  boxRadius: 4
-}
-
-const itemMid = {
-  flex: 5,
-  paddingLeft: 12,
-}
-const itemRight = {
-  flex: 1,
-  textAlign: 'center',
-}
-const contentStyle = {
-  fontSize: 18,
-  color: '#c89b01',
-  margin: 0,
-  fontWeight: 'normal'
-}
-
 const VoiceItem = ({ voice }) => (
-  <li style={style}>
-    <div style={{
-      width: 50,
-      height: 50,
-      lineHeight: 3.2,
-      color: '#fff',
-      fontSize: 16,
-      marginRight: 12,
-      borderRadius: '50%',
-      textAlign: 'center',
-      backgroundColor: randomColor()
-    }}
-    >{voice.author}</div>
-    <div style={itemMid}>
-      <h5 style={contentStyle}>{voice.content}</h5>
-      <span>{voice.data}by{voice.author}</span>
-    </div>
-    <div style={itemRight}>
-      <span>
-        {voice.like}
+  <li className="mdl-list__item mdl-list__item--two-line"
+    style={{ backgroundColor: '#fff', marginBottom: 12, cursor: 'pointer' }}>
+    <span className="mdl-list__item-primary-content">
+      <i className="material-icons mdl-list__item-avatar"
+        style={{ backgroundColor: randomColor() }}>person</i>
+      {voice.content}
+      <span className="mdl-list__item-sub-title">
+        作者: {voice.author} &nbsp;&nbsp;
+        创建于: {getDateDiff(voice.create_at)}
       </span>
-      <span>&gt;</span>
-    </div>
+    </span>
+    <span className="mdl-list__item-secondary-content">
+      <span className="mdl-badge" data-badge="♥">{voice.likes}</span>
+    </span>
   </li>
 )
+
+function getDateDiff(date) {
+  return `${Math.ceil(((Date.now() - new Date(date).getTime()) / 1000 / 60 / 60 / 24))}天前`
+}
 
 export default VoiceItem
