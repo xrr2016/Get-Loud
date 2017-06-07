@@ -11,3 +11,23 @@ html, body {
   box-sizing: inherit;
 }
 
+.app-header {
+ /*background-color: #FFDD67;*/
+ min-height: 100px;
+}
+.mdl-layout__tab-bar {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.app-nav {
+  text-transform: uppercase;
+}
+.app-main {
+  max-width: 900px;
+  margin: auto;
+}
+.app-like-icon {
+
+}
+.app-like-count {
+  color: #37c700;
+}

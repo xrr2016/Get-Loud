@@ -1,17 +1,23 @@
 import React from 'react'
+import VoiceList from '../containers/voice_list'
 
 const AppMain = () =>
-  <main className="mdl-layout__content mdl-grid">
-    <section className="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+  <main className="mdl-layout__content" 
+    style={{padding: 40}}>
+    <section className="mdl-layout__tab-panel is-active" id="all">
       <div className="page-content">
-        <div className="page-content">Your content goes here --></div>
+        <VoiceList />
       </div>
     </section>
-    <section className="mdl-layout__tab-panel" id="scroll-tab-2">
-      <div className="page-content">Your content goes here --></div>
+    <section className="mdl-layout__tab-panel" id="hot">
+      <div className="page-content">
+        <VoiceList />
+      </div>
     </section>
-    <section className="mdl-layout__tab-panel" id="scroll-tab-3">
-      <div className="page-content">Your content goes here --></div>
+    <section className="mdl-layout__tab-panel" id="new">
+      <div className="page-content">
+        <VoiceList />
+      </div>
     </section>
   </main>
 

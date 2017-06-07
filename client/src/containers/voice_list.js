@@ -4,18 +4,6 @@ import { connect, } from 'react-redux'
 import { fetchVoices } from '../action/voice'
 import VoiceItem from '../components/voice_item'
 
-// const style = {
-//   width: '100%',
-//   minHeight: 524,
-//   margin: '0px auto',
-//   marginTop: 6,
-//   padding: 0,
-//   listStyle: 'none',
-//   overflowX: 'hidden',
-//   overflowY: 'auto',
-//   // boxShadow: '0px 0px 4px rgba(0, 0, 0, .2)'
-// }
-
 class VoiceList extends Component {
 
   componentDidMount() {

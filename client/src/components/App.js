@@ -5,15 +5,14 @@ import React, { Component } from 'react'
 // import VoiceList from '../containers/voice_list'
 // import CreateVoiceForm from '../containers/create_voice_form'
 import AppHeader from './app_header'
-import AppDrawer from './app_drawer'
 import AppMain from './app_main'
+import '../styles/app.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
         <AppHeader />
-        <AppDrawer />
         <AppMain />
       </div>
     )
