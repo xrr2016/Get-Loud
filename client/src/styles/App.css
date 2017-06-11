@@ -11,10 +11,9 @@ html, body {
   box-sizing: inherit;
 }
 
-.app-header {
- /*background-color: #FFDD67;*/
- min-height: 100px;
-}
+/*.app-header {
+ background-color: #FFDD67;
+}*/
 .mdl-layout__tab-bar {
   background-color: rgba(0, 0, 0, 0.08);
 }
@@ -25,9 +24,15 @@ html, body {
   max-width: 900px;
   margin: auto;
 }
-.app-like-icon {
+/*.app-like-icon {
 
-}
+}*/
 .app-like-count {
   color: #37c700;
+}
+.app-new-voice-btn {
+  position: fixed;
+  right: 5%;
+  bottom: 24px;
+  z-index: 999;
 }

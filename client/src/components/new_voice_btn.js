@@ -1,10 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import '../styles/new_voice_btn.css'
 
 const NewVoiceBtn = () =>
-  <NavLink to="/create_voice"
-    className="mdl-button mdl-js-button mdl-button--raised mdl-button--primary"
-  >New Voice</NavLink>
-  
+  <NavLink to='/create' className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab app-new-voice-btn">
+    <i className="material-icons">add</i>
+  </NavLink>
+
 export default NewVoiceBtn
