@@ -8,7 +8,7 @@ class ClickCounter extends Component {
 
   handleClickBtn = () => {
     this.setState({
-      count: this.state.count += 1
+      count: this.state.count + 1
     })
   }
 
