@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import ClickCounter from './components/ClickCounter'
+// import ClickCounter from './components/ClickCounter'
+import ControlPanel from './container/ControlPanel'
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<ClickCounter />, document.getElementById('root'));
+ReactDOM.render(<ControlPanel />, document.getElementById('root'));
 registerServiceWorker();
