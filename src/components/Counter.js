@@ -1,10 +1,26 @@
 import React, { Component } from 'react'
 
 class Counter extends Component {
-  state = {
-    count: this.props.ininValue || 0 
+   
+  constructor () {
+    super()
+    console.log('enter constructor')
+    
+    this.state = {
+      count: 0  
+    }
   }
 
+  
+  componentWillMount () {
+    console.log('enter componentWillMount' + this.props.caption)
+  }
+  componentDidMount () {
+    console.log('enter componentDidMount' + this.props.caption)
+  }
+  componentWillReciveProps (nextProps) {
+    console.log('enter componentWillReciveProps', this.props.caption)
+  }
   handleClickIncrementBtn = () => {
     this.setState({
       count: this.state.count + 1
@@ -26,6 +42,10 @@ class Counter extends Component {
       </div>
     )
   }
+}
+
+Counter.defaultProps = {
+  initValue: 0
 }
 
 export default Counter
