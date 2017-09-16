@@ -4,14 +4,12 @@ class Counter extends Component {
    
   constructor () {
     super()
-    console.log('enter constructor')
-    
+    console.log('enter counter constructor')
     this.state = {
       count: 0  
     }
   }
 
-  
   componentWillMount () {
     console.log('enter componentWillMount' + this.props.caption)
   }
