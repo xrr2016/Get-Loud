@@ -4,7 +4,7 @@ export default (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return [
-        { id: action.id, content: action.content, completed: acorn.completed },
+        { id: action.id, content: action.content, completed: action.completed },
         ...state
       ]
     case TOGGLE_TODO:

@@ -1,9 +1,9 @@
-import react from 'react'
+import React from 'react'
 import { view as Todos } from './todos/'
-import { view as Filter } from './filter/'
+// import { view as Filter } from './filter/'
 
 export default () => 
   <div>
     <Todos />
-    <Filter />
+    {/* <Filter /> */}
   </div>
