@@ -1,15 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import './index.css'
-import App from './App'
-import store from './Store'
-import registerServiceWorker from './registerServiceWorker'
+import _ from 'lodash'
+import numRef from './ref.json'
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App /> 
-  </Provider>,
-  document.getElementById('root')
-)
-registerServiceWorker();
+export const num2word = (num) => {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.num === num ? ref.word : accum
+  }, '')
+}
+
+export const word2num = word => {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.word === word && word.toLowerCase() ? ref.num : accum
+  }, -1)
+}
