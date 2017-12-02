@@ -1,0 +1,42 @@
+.circle-menu-container {
+  position: relative;
+}
+.circle-menu-item {
+  // position: absolute;
+  cursor: pointer;
+  // opacity: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: #ffffff;
+}
+.circle-menu-item.menu {
+  opacity: 1;
+}
+.circle-menu-item.white {
+  background: #ecf0f1;
+}
+.circle-menu-item.blue {
+  background: #3498db;
+}
+.circle-menu-item.green {
+  background: #2ecc71;
+}
+.circle-menu-item.blue {
+  background: #3498db;
+}
+.circle-menu-item.red {
+  background: #e74c3c;
+}
+.circle-menu-item.purple {
+  background: #9b59b6;
+}
+.circle-menu-item.purple {
+  background: #9b59b6;
+}
+.circle-menu-item.purple {
+  background: #9b59b6;
+}
