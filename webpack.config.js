@@ -1,25 +1,33 @@
 const path = require('path')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: path.join(__dirname, 'src', 'index'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'webpack-numbers.min.js',
-    library: 'webpackNumbers',
-    libraryTarget: 'umd'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
-  plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true
-    })
-  ],
-  externals: {
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '-'
-    }
+  module: {
+    rules: [
+      {
+        test: /.js$/,
+        include: [path.resolve(__dirname, 'src')],
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'bower_components')
+        ],
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.json', '.js', '.jsx', '.css']
+  },
+  devtool: 'source-map',
+  devServer: {
+    publicPath: path.join('/dist/')
   }
 }
