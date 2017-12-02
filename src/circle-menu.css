@@ -1,42 +1,135 @@
 .circle-menu-container {
   position: relative;
 }
+
 .circle-menu-item {
-  // position: absolute;
+  position: absolute;
   cursor: pointer;
-  // opacity: 0;
-  width: 48px;
-  height: 48px;
+  opacity: 0;
+  // width: 48px;
+  // height: 48px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background: #ffffff;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  transition: all .3s ease;
 }
-.circle-menu-item.menu {
+
+.circle-menu-item.show {
   opacity: 1;
 }
+
 .circle-menu-item.white {
   background: #ecf0f1;
 }
+
 .circle-menu-item.blue {
   background: #3498db;
 }
+
 .circle-menu-item.green {
   background: #2ecc71;
 }
+
 .circle-menu-item.blue {
   background: #3498db;
 }
+
 .circle-menu-item.red {
   background: #e74c3c;
 }
+
 .circle-menu-item.purple {
   background: #9b59b6;
 }
-.circle-menu-item.purple {
-  background: #9b59b6;
+
+.circle-menu-item.yellow {
+  background: #f1c40f;
 }
-.circle-menu-item.purple {
-  background: #9b59b6;
+
+.circle-menu-item.orange {
+  background: #e67e22;
+}
+
+.circle-menu-item.mm {
+  top: 0;
+  left: 0;
+}
+
+.circle-menu-item.ml {
+  top: 0;
+  left: -96px;
+}
+
+.circle-menu-item.mr {
+  top: 0;
+  left: 96px;
+}
+
+.circle-menu-item.tr {
+  top: -96px;
+  left: 96px;
+}
+
+.circle-menu-item.tm {
+  top: -96px;
+  left: 0;
+}
+
+.circle-menu-item.tl {
+  top: -96px;
+  left: -96px;
+}
+
+.circle-menu-item.bl {
+  top: 96px;
+  left: -96px;
+}
+
+.circle-menu-item.bm {
+  left: 0;
+  top: 96px;
+}
+
+.circle-menu-item.br {
+   left: 96px;
+   top: 96px;
+}
+
+.circle-menu-item.lt {
+   left: -48px;
+   top: -48px;
+}
+.circle-menu-item.rt {
+   left: 48px;
+   top: -48px;
+}
+.circle-menu-item.lb {
+   left: -48px;
+   top: 48px;
+}
+.circle-menu-item.rb {
+   left: 48px;
+   top: 48px;
+}
+
+.circle-menu-item.star-top {
+  top: -72px;
+  left: 0;
+}
+.circle-menu-item.star-left {
+  top: -24px;
+  left: -72px;
+}
+.circle-menu-item.star-right {
+  top: -24px;
+  left: 72px;
+}
+.circle-menu-item.star-bottom-left {
+  top: 54px;
+  left: -48px;
+}
+.circle-menu-item.star-bottom-right {
+  top: 54px;
+  left: 48px;
 }
